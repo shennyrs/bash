@@ -1,0 +1,8 @@
+class is a logicla grouping of data and functions
+
+define by using class keyword
+    eg: class myclass():
+    
+inside classes you can define functions,methods
+
+ever

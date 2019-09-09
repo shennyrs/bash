@@ -1,0 +1,5 @@
+100 	hundered
+1	one
+50	fifty
+512	fievtwlev
+350	threfifty

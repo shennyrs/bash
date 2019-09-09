@@ -1,0 +1,2 @@
+^   begining of string
+w+  matches alphanumeric character in string
