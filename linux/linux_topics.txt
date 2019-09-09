@@ -1,0 +1,149 @@
+history
+	history 5 - last 5 histories
+	ctrl r
+
+ping 
+
+man 
+help 
+info
+whatis
+
+Filesystem structure
+
+absolute & relative path
+cd
+ls
+rm
+touch
+cp
+mv
+
+users,groups abd permissions
+system users
+userdefined users
+useradd
+	id
+	uid
+	gid
+	interpretting ls -l for user/group information
+	primary group
+	secondary group
+	
+chown
+	recursevly
+chgrp
+	
+chmod
+	symbolic 
+	numeric
+	
+command editing shortcuts
+ctrl a -> begining of command
+ctrl e -> enf of command
+ctrl u -> deletes  to begining
+ctrl k -> deletes till end
+ctrl arrow -> moves left and right of a word
+
+~
+hostname
+	i	ip
+	d 	domainname
+	s 	shortcut name
+	a	alias name
+	f 	fqdn
+	
+environmental variables
+
+ssh
+telnet
+
+alias
+	temporary
+	permanent	bashrc
+
+user login order
+	startup script will run
+	checks /etc/profile->for root
+	/home/user/.bash_profile->for normal
+	
+	/etc/profile.d/*.sh
+	bash-profile
+	bashrc
+
+finding and processing
+	realtime search
+		find commmand
+			find [dir] [criteria] [action]
+				name by name
+				iname case insesnsitive name
+				group by group
+				user by user
+				uid
+				gid
+				perm
+				size
+					size 10 exact
+					size -10 <10
+					size +10 >10
+					
+				atime access/read  time
+				mtime modified time
+				ctime metadate change
+				
+			like wise amin.mmin,cmin
+			
+			logical operation
+				AND by space
+					find / -name -user ..
+				OR by -o or -not
+					find / -name dfsdf -user ravi -o -user sai
+					find / -name ddfsdf -user ravi -not group sai
+					
+			executing command with find	
+				-exec without prombt
+				-ok prombt
+				
+
+	db search
+		locate
+			/var/lib/mlocate/mlocate.db
+
+redirection 
+	stdout,stderr
+	>
+	2>
+	&>
+	>>
+	
+	pipe |
+		less
+			page by page output
+	redirecting to multiple targets -> tee
+	
+	upper to lower & lower to upper
+	tr 'a-z' 'A-Z' < filename
+
+text processing tools
+	cat
+	less
+
+head and tail
+
+text extract
+	grep
+		-i
+		-n
+		-v 
+		A2n keyword -> 2 lines after keywords
+		B2n keyword -> 2 lines before keywords
+		-r
+		--color
+		
+		
+sort,uniq,diff
+
+awk,sed
+
+
+

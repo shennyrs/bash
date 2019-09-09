@@ -1,0 +1,77 @@
+top command tricks
+
+top -v	->version
+
+array up & down switch through processes 
+
+q will quit top
+
+loadaverage -> 1min, 5min and 15min
+	measure of amount of computational work a system performs
+	on linux its number of processes in r and s state
+	1 cpu, maximum allowed load is 1
+	if load is 2.12 the it means that overloaded by 112%
+
+%cpu
+	us-user processes
+	sy-system processes
+	ni-nice value processes
+	id-idle cpu
+	wa-io wait
+	hi-hw interupt sent to cpu
+	sw-sw interupt sent to cpu
+	st-cpu stealed by the hypervisor
+	
+tasks
+	r-running
+	s-sleeping,processes in this state are waiting for an event to complete 
+	t-stopped,stopped by a signal
+	z-zombiue,doesnt have parent
+	
+tasks areas
+	pid-process id
+	user-user who is running the processes
+	pr and ni- priority and nice value, less nice value means more priority
+	virt-total amount of memory consumed by processes
+		-this includes prgrms code,data stoed by process in memory and usage from swap
+	res-physical memory used by process which is equal to %mem
+	shr-shared memory with other process
+	S-states->r,s,t,z
+	TIME-total cpu time used by rpocess since it started
+	command-name of process
+	
+USAGE
+	k ->kill process and mention SIGTERM/SIGKILL
+	
+	sorting
+		M-by memory
+		P-by cpu
+		N-by pid
+		T-by running time
+		can also sort by top -o %CPU
+		
+	Showing list of threads instead of process
+		H or top -H
+	Showing full path of commands
+		c or top -c
+	Tree view
+		V or top -V
+	listing processes from a user-user
+		top -u user
+	Filtering out commands from top
+		press O
+		!COMMAND=sshd - filter our sshd from top
+		COMMAND=sshd- shows only commands with sshd
+		%CPU>3.0-processes which have cpu utilization more than 3%
+		= will clear all applied filters
+		
+	W will save this settings to .toprc
+	
+	n will limit the number of process
+	
+	
+		
+		
+		
+
+
